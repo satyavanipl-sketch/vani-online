@@ -1,0 +1,36 @@
+{
+    "credentials": {
+        "linkedin_client_id": "YOUR_LINKEDIN_CLIENT_ID",
+        "linkedin_client_secret": "YOUR_LINKEDIN_CLIENT_SECRET",
+        "linkedin_redirect_uri": "http://localhost:8002/api/callback",
+        "linkedin_access_token": "YOUR_LINKEDIN_ACCESS_TOKEN",
+        "linkedin_person_urn": "urn:li:person:TJv4VfH9-8",
+        "linkedin_member_name": "Raja Ratnam Pasalapudi",
+        "gemini_api_key": "YOUR_GEMINI_API_KEY",
+        "linkedin_redirect_back": "http://localhost:5176",
+        "linkedin_scope_mode": "openid"
+    },
+    "schedules": [
+        {
+            "id": "e0579d2d-91ad-4338-bb6a-1438fed3de6e",
+            "topic": "Customer experience through automation",
+            "scheduled_time": "2026-08-03T03:00:00.000Z",
+            "commentary": "Stop frustrating your customers with rigid 'Press 1 for Support' trees. \ud83d\uded1\n\nIn 2026, the battle for Customer Experience (CX) is won through Agentic CX Automation. We have officially crossed the chasm from static, script-following chatbots to autonomous multi-agent systems that negotiate, resolve, and personalize in real-time.\n\nBy connecting LLM agents directly to secure internal APIs, modern enterprises are resolving complex refunds, billing disputes, and custom setups in seconds\u2014not days.\n\nThe result? Lower operational costs, zero-queue wait times, and a highly personalized experience that actually feels human.\n\nIs your CX stack still stuck in the past? Here is how the paradigm has shifted. \ud83d\udc47\n\n#CustomerExperience #AI #Automation #SoftwareEngineering #TechTrends",
+            "card_text": "{\n  \"layout_type\": \"comparison_table\",\n  \"commentary\": \"Stop frustrating your customers with rigid 'Press 1 for Support' trees. \\ud83d\\uded1\\n\\nIn 2026, the battle for Customer Experience (CX) is won through Agentic CX Automation. We have officially crossed the chasm from static, script-following chatbots to autonomous multi-agent systems that negotiate, resolve, and personalize in real-time.\\n\\nBy connecting LLM agents directly to secure internal APIs, modern enterprises are resolving complex refunds, billing disputes, and custom setups in seconds\\u2014not days.\\n\\nThe result? Lower operational costs, zero-queue wait times, and a highly personalized experience that actually feels human.\\n\\nIs your CX stack still stuck in the past? Here is how the paradigm has shifted. \\ud83d\\udc47\\n\\n#CustomerExperience #AI #Automation #SoftwareEngineering #TechTrends\",\n  \"card_title\": \"The CX Evolution: Chatbots vs. Agents\",\n  \"card_takeaway\": \"Autonomous agents don't just route tickets\\u2014they solve them end-to-end.\",\n  \"card_category\": \"DAILY INSIGHT\",\n  \"card_subtitle\": \"\",\n  \"card_points\": [],\n  \"illustration_type\": \"tech\",\n  \"code_title\": \"\",\n  \"code_content\": \"\",\n  \"code_explanation\": \"\",\n  \"chart_title\": \"\",\n  \"chart_type\": \"bar\",\n  \"chart_labels\": [],\n  \"chart_values\": [],\n  \"table_headers\": [\n    \"Feature\",\n    \"Legacy Chatbots\",\n    \"Agentic CX (2026)\"\n  ],\n  \"table_rows\": [\n    [\n      \"Architecture\",\n      \"Rigid decision-trees\",\n      \"Multi-agent LLM reasoning\"\n    ],\n    [\n      \"Integration\",\n      \"Static API triggers\",\n      \"Dynamic real-time tool-use\"\n    ],\n    [\n      \"Handling\",\n      \"Fails on complex paths\",\n      \"Self-correcting workflows\"\n    ],\n    [\n      \"Resolution\",\n      \"Escalates to human queue\",\n      \"Instant end-to-end execution\"\n    ]\n  ]\n}",
+            "status": "pending",
+            "error_message": null,
+            "published_urn": null
+        }
+    ],
+    "logs": [
+        {
+            "id": "17110fdd-cb4b-483b-80a1-b3be87362e1e",
+            "timestamp": "2026-07-29T12:02:42.363316",
+            "topic": "Ad-hoc Post",
+            "commentary": "Is 'Clean Code' dead in the age of AI? \ud83e\udd16\n\nIn 2026, we aren't just writing code for humans anymore\u2014we are writing it to be read, refactored, and maintained by LLM co-pilots and autonomous AI agents.\n\nBecause of this, the definition of 'Clean Code' has fundamentally shifted. Highly compressed, clever abstractions that humans used to love actually degrade AI code-understanding. Today, 'clean' means predictability, strict typing, and high-context structures.\n\nHere is how clean code practices have transformed for the AI era. \n\nAre you still using legacy clean code rules, or have you adapted to the hybrid developer workflow? Let's discuss in the comments! \ud83d\udc47\n\n#CleanCode #SoftwareEngineering #AI #DeveloperProductivity #Coding",
+            "card_text": "{\n  \"layout_type\": \"comparison_table\",\n  \"commentary\": \"Is 'Clean Code' dead in the age of AI? \\ud83e\\udd16\\n\\nIn 2026, we aren't just writing code for humans anymore\\u2014we are writing it to be read, refactored, and maintained by LLM co-pilots and autonomous AI agents.\\n\\nBecause of this, the definition of 'Clean Code' has fundamentally shifted. Highly compressed, clever abstractions that humans used to love actually degrade AI code-understanding. Today, 'clean' means predictability, strict typing, and high-context structures.\\n\\nHere is how clean code practices have transformed for the AI era. \\n\\nAre you still using legacy clean code rules, or have you adapted to the hybrid developer workflow? Let's discuss in the comments! \\ud83d\\udc47\\n\\n#CleanCode #SoftwareEngineering #AI #DeveloperProductivity #Coding\",\n  \"card_title\": \"Clean Code: Legacy vs. AI Era\",\n  \"card_takeaway\": \"Optimizing for predictability helps both your human team and your AI co-pilot.\",\n  \"primary_color\": \"#0D9488\",\n  \"secondary_color\": \"#0F766E\",\n  \"background_color\": \"#F0FDFA\",\n  \"illustration_icon\": \"\\u2728\",\n  \"card_category\": \"DAILY INSIGHT\",\n  \"card_subtitle\": \"\",\n  \"card_points\": [],\n  \"code_title\": \"\",\n  \"code_content\": \"\",\n  \"code_explanation\": \"\",\n  \"chart_title\": \"\",\n  \"chart_type\": \"bar\",\n  \"chart_labels\": [],\n  \"chart_values\": [],\n  \"table_headers\": [\n    \"Pattern\",\n    \"Legacy (Human-Only)\",\n    \"AI-Era (Hybrid)\"\n  ],\n  \"table_rows\": [\n    [\n      \"Abstractions\",\n      \"Deeply nested, aggressive DRY\",\n      \"Flatter, context-rich modules\"\n    ],\n    [\n      \"Type Systems\",\n      \"Implicit or loose typing\",\n      \"Strict, self-documenting types\"\n    ],\n    [\n      \"Comments\",\n      \"None (code is self-explaining)\",\n      \"Intent-focused prompts & schema\"\n    ],\n    [\n      \"Complexity\",\n      \"Clever, ultra-short syntax\",\n      \"Simple, explicit, deterministic\"\n    ]\n  ]\n}",
+            "status": "completed",
+            "published_urn": "urn:li:share:7488119292459331584"
+        }
+    ]
+}

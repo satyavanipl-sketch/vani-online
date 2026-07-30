@@ -1,0 +1,17 @@
+# Gitignore for project
+.venv/
+venv/
+env/
+ENV/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+node_modules/
+dist/
+build/
+*.log
+.DS_Store
+.env
+.env.local
+.env.*.local

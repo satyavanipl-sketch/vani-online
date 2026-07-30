@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!-- Label uniquely identifying the background daemon -->
+    <key>Label</key>
+    <string>com.user.linkedin-autoposter</string>
+
+    <!-- Path to the Python virtual environment and the main script -->
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Users/raju/.gemini/antigravity-ide/scratch/linkedin-autoposter/.venv/bin/python3</string>
+        <string>/Users/raju/.gemini/antigravity-ide/scratch/linkedin-autoposter/main.py</string>
+    </array>
+
+    <!-- Working directory for relative paths (like finding .env) -->
+    <key>WorkingDirectory</key>
+    <string>/Users/raju/.gemini/antigravity-ide/scratch/linkedin-autoposter</string>
+
+    <!-- Run daily at 9:00 AM local time -->
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key>
+        <integer>9</integer>
+        <key>Minute</key>
+        <integer>0</integer>
+    </dict>
+
+    <!-- Log standard output and errors to our local log file -->
+    <key>StandardOutPath</key>
+    <string>/Users/raju/.gemini/antigravity-ide/scratch/linkedin-autoposter/autoposter.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/raju/.gemini/antigravity-ide/scratch/linkedin-autoposter/autoposter.log</string>
+
+    <!-- Keep the script from running multiple instances if one hangs -->
+    <key>ThrottleInterval</key>
+    <integer>60</integer>
+</dict>
+</plist>
