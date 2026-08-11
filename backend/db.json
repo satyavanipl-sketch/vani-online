@@ -4,11 +4,17 @@
         "linkedin_client_secret": "YOUR_LINKEDIN_CLIENT_SECRET",
         "linkedin_redirect_uri": "http://localhost:8002/api/callback",
         "linkedin_access_token": "YOUR_LINKEDIN_ACCESS_TOKEN",
-        "linkedin_person_urn": "urn:li:person:TJv4VfH9-8",
-        "linkedin_member_name": "Raja Ratnam Pasalapudi",
+        "linkedin_person_urn": "urn:li:person:YOUR_PERSON_URN",
+        "linkedin_member_name": "YOUR_MEMBER_NAME",
         "gemini_api_key": "YOUR_GEMINI_API_KEY",
         "linkedin_redirect_back": "http://localhost:5176",
-        "linkedin_scope_mode": "openid"
+        "linkedin_scope_mode": "openid",
+        "pinterest_access_token": "",
+        "pinterest_board_url": "https://in.pinterest.com/satyavanipl/vani_bedtime-stories/",
+        "blogger_blog_id": "YOUR_BLOGGER_BLOG_ID",
+        "google_client_id": "",
+        "google_client_secret": "",
+        "google_refresh_token": ""
     },
     "schedules": [
         {
