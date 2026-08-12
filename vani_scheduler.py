@@ -89,7 +89,7 @@ def generate_illustration(api_key, prompt, output_path, label):
     """Generates an image using Gemini Image API, falls back to Pillow if quota is 0/error."""
     try:
         genai.configure(api_key=api_key)
-        model_name = "gemini-2.5-flash-image"
+        model_name = "imagen-3.0-generate-002"
         print(f"  Attempting AI image generation with model {model_name}...")
         model = genai.GenerativeModel(model_name)
         response = model.generate_content(prompt)
@@ -254,7 +254,7 @@ def run_saturday_phase(db):
     # 2. Query Gemini to write the story text
     api_key = db["credentials"]["gemini_api_key"]
     genai.configure(api_key=api_key)
-    model = genai.GenerativeModel("gemini-3.5-flash")
+    model = genai.GenerativeModel("gemini-1.5-flash")
     
     prompt = f"""You are an expert children's book author writing bedtime stories for kids.
 Generate a new, highly engaging {topic_type} about virtues like kindness, sharing, bravery, curiosity, or friendship.
