@@ -96,7 +96,7 @@ def upload_images(rest_nonce):
         alt_text = info["alt"]
         
         # Find local image file matching the pattern
-        search_pattern = f"{brain_dir}/{prefix}*.png"
+        search_pattern = f"{brain_dir}/{prefix}_*.png"
         matching_files = glob.glob(search_pattern)
         
         if not matching_files:
