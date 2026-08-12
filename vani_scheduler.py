@@ -249,7 +249,8 @@ def run_saturday_phase(db):
     week_num = datetime.date.today().isocalendar()[1]
     is_even = (week_num % 2 == 0)
     topic_type = "people/human-centered story" if is_even else "animal-centered story"
-    print(f"Calendar Week: {week_num} (Even: {is_even}) -> Generating {topic_type}")
+    assigned_cats = [11, 13] if is_even else [1, 2]
+    print(f"Calendar Week: {week_num} (Even: {is_even}) -> Generating {topic_type} (Cats: {assigned_cats})")
     
     # 2. Query Gemini to write the story text
     api_key = db["credentials"]["gemini_api_key"]
@@ -328,7 +329,8 @@ Output the story strictly in JSON format as specified:
     # Save Sunday Draft
     draft = {
         "story": story_data,
-        "image_paths": image_paths
+        "image_paths": image_paths,
+        "categories": assigned_cats
     }
     with open(draft_path, "w", encoding="utf-8") as f:
         json.dump(draft, f, indent=4)
@@ -347,6 +349,7 @@ def run_sunday_phase(db):
         
     story_data = draft.get("story", {})
     image_paths = draft.get("image_paths", {})
+    assigned_cats = draft.get("categories", [1, 2, 11])
     
     api_key = db["credentials"]["gemini_api_key"]
     
@@ -468,7 +471,7 @@ def run_sunday_phase(db):
         'slug': story_data.get("slug"),
         'content': story_html,
         'status': 'publish',
-        'categories': [1, 2, 11]
+        'categories': assigned_cats
     }
     if featured_img_id:
         payload['featured_media'] = featured_img_id

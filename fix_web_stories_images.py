@@ -363,6 +363,35 @@ def main():
         
     print(f"🔓 Login successful! Nonce: {nonce}")
     
+    # Fetch category mappings
+    std_id_to_story_cat = {}
+    try:
+        # Fetch standard categories
+        std_cat_req = urllib.request.Request(f"{base_url}/wp-json/wp/v2/categories?per_page=100")
+        std_cat_req.add_header('X-WP-Nonce', nonce)
+        with opener.open(std_cat_req) as response:
+            std_categories = json.loads(response.read().decode('utf-8'))
+            
+        # Fetch web story categories
+        story_cat_req = urllib.request.Request(f"{base_url}/wp-json/web-stories/v1/web_story_category?per_page=100")
+        story_cat_req.add_header('X-WP-Nonce', nonce)
+        with opener.open(story_cat_req) as response:
+            story_categories = json.loads(response.read().decode('utf-8'))
+            
+        # Map slug -> web_story_category_id
+        slug_to_story_cat = {cat["slug"]: cat["id"] for cat in story_categories}
+        
+        # Map standard_id -> web_story_category_id
+        for cat in std_categories:
+            slug = cat["slug"]
+            if slug == "adventure-fantasy":
+                slug = "adventure-stories"
+            if slug in slug_to_story_cat:
+                std_id_to_story_cat[cat["id"]] = slug_to_story_cat[slug]
+        print(f"  Mapped categories: {std_id_to_story_cat}")
+    except Exception as e:
+        print(f"⚠️ Warning: Could not retrieve category mappings: {e}")
+        
     # Process all 6 Web Stories
     for story_id, post_id in stories_to_posts.items():
         print(f"\n================ PATCHING WEB STORY ID {story_id} (Post ID {post_id}) ================")
@@ -397,6 +426,15 @@ def main():
         
         payload = build_web_story_payload(nonce, title, slides, feat_media_id, feat_img_url, status, date, date_gmt)
         
+        # Assign category mapping if available
+        story_cat_ids = []
+        for cat_id in post.get("categories", []):
+            if cat_id in std_id_to_story_cat:
+                story_cat_ids.append(std_id_to_story_cat[cat_id])
+        if story_cat_ids:
+            payload["web_story_category"] = story_cat_ids
+            print(f"  Mapped Web Story Categories: {story_cat_ids}")
+            
         target_url = f"{web_stories_api_url}/{story_id}"
         data = json.dumps(payload).encode('utf-8')
         post_req = urllib.request.Request(target_url, data=data, method='POST')
