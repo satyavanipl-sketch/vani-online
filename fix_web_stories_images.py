@@ -23,7 +23,8 @@ stories_to_posts = {
     970: 923,  # Clockwork Heart
     975: 718,  # Oliver
     976: 719,  # Pippin
-    977: 796   # Magic Forest
+    977: 796,  # Magic Forest
+    27212: 21502 # Clever Monkey and Crocodile
 }
 
 def login():
