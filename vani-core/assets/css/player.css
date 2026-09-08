@@ -1,0 +1,328 @@
+/* Vani Core Player and Lead Capture Box styling */
+
+.vani-audio-player {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.06);
+    border-radius: 20px;
+    padding: 20px;
+    margin: 25px 0;
+    max-width: 100%;
+}
+
+.vani-player-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 12px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.vani-player-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.vani-play-btn {
+    background: #2ecc71;
+    border: none;
+    color: white;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s, background 0.2s;
+    box-shadow: 0 4px 10px rgba(46, 204, 113, 0.3);
+}
+
+.vani-play-btn:hover {
+    transform: scale(1.05);
+    background: #27ae60;
+}
+
+.vani-play-btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+.vani-time {
+    font-size: 13px;
+    color: #7f8c8d;
+    font-family: monospace;
+    min-width: 35px;
+}
+
+.vani-progress-container {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    min-width: 150px;
+}
+
+.vani-progress-bar {
+    width: 100%;
+    cursor: pointer;
+    accent-color: #2ecc71;
+}
+
+.vani-speed-container {
+    position: relative;
+}
+
+.vani-speed-btn {
+    background: #f1f2f6;
+    border: 1px solid #ced6e0;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 13px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #2f3542;
+    transition: background 0.2s;
+}
+
+.vani-speed-btn:hover {
+    background: #dfe4ea;
+}
+
+.vani-speed-menu {
+    position: absolute;
+    bottom: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    border: 1px solid #ced6e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    z-index: 100;
+    min-width: 70px;
+}
+
+.vani-speed-option {
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 13px;
+    text-align: center;
+    transition: background 0.2s;
+}
+
+.vani-speed-option:hover {
+    background: #f1f2f6;
+}
+
+.vani-speed-option.active {
+    background: #2ecc71;
+    color: white;
+    font-weight: bold;
+}
+
+.vani-volume-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.vani-volume-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #57606f;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.vani-volume-btn svg {
+    width: 22px;
+    height: 22px;
+}
+
+.vani-volume-slider {
+    width: 70px;
+    cursor: pointer;
+    accent-color: #2ecc71;
+}
+
+/* Lead Magnet Form Styles */
+.vani-lead-box {
+    background: #f9fbf9;
+    border: 2px dashed #2ecc71;
+    border-radius: 16px;
+    padding: 30px;
+    margin: 30px 0;
+}
+
+.vani-form-group {
+    margin-bottom: 20px;
+}
+
+.vani-input {
+    width: 100%;
+    padding: 12px 18px;
+    border-radius: 30px;
+    border: 1px solid #ced6e0;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+.vani-submit-btn {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(231, 76, 60, 0.2);
+    transition: transform 0.2s, background 0.2s;
+}
+
+.vani-submit-btn:hover {
+    transform: translateY(-2px);
+    background: #c0392b;
+}
+
+.consent-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 13px;
+    color: #57606f;
+    line-height: 1.4;
+}
+
+.consent-group input {
+    margin-top: 3px;
+}
+
+/* ==========================================================================
+   GLOBAL SITE-WIDE FIXES: HEADER NAVIGATION & HIGH-CONTRAST TEXT STYLING
+   ========================================================================== */
+
+/* Header & Navigation Z-index / Dropdown Overlap Fix */
+header.site-header,
+#masthead {
+    z-index: 99999 !important;
+    position: relative !important;
+    background-color: #ffffff !important;
+    border-bottom: 1px solid #e2e8f0 !important;
+}
+
+/* Ensure Submenus and Dropdowns don't overlap awkwardly with body/clouds */
+.main-navigation ul ul,
+.nav-menu ul,
+.sub-menu,
+.children {
+    background-color: #ffffff !important;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15) !important;
+    border-radius: 12px !important;
+    padding: 10px 14px !important;
+    z-index: 999999 !important;
+    border: 1px solid #e2e8f0 !important;
+}
+
+.main-navigation ul ul a,
+.nav-menu ul a,
+.sub-menu a,
+.children a {
+    color: #1e293b !important;
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    padding: 8px 12px !important;
+    display: block !important;
+    white-space: nowrap !important;
+    background: transparent !important;
+    border-radius: 6px !important;
+}
+
+.main-navigation ul ul a:hover,
+.nav-menu ul a:hover,
+.sub-menu a:hover,
+.children a:hover {
+    color: #0284c7 !important;
+    background-color: #f1f5f9 !important;
+}
+
+.main-navigation a,
+.nav-menu > li > a {
+    color: #0f172a !important;
+    font-weight: 700 !important;
+}
+
+/* Site-wide Post & Content High Contrast Text Visibility */
+.entry-content,
+.blog-post-wrap,
+article {
+    color: #0f172a !important;
+}
+
+.entry-content p {
+    color: #0f172a !important;
+    font-size: 17px !important;
+    line-height: 1.8 !important;
+}
+
+.entry-content h1,
+.entry-content h2,
+.entry-content h3,
+.entry-content h4 {
+    color: #0f172a !important;
+    font-weight: 700 !important;
+}
+
+.entry-content ul li,
+.entry-content ol li,
+.entry-content li {
+    color: #1e293b !important;
+    font-size: 16px !important;
+    line-height: 1.8 !important;
+}
+
+.story-intro-box {
+    background-color: #ffffff !important;
+    color: #1e293b !important;
+    border-left: 6px solid #10b981 !important;
+    border-radius: 12px !important;
+    padding: 22px 25px !important;
+    margin: 25px 0 !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1) !important;
+}
+
+.story-intro-box h3 {
+    color: #047857 !important;
+    margin-top: 0 !important;
+}
+
+.story-intro-box ul,
+.story-intro-box li {
+    color: #334155 !important;
+}
+
+.story-intro-box li strong {
+    color: #0f172a !important;
+}
+
+.story-moral {
+    background-color: #fffbeb !important;
+    color: #78350f !important;
+    border-left: 6px solid #f59e0b !important;
+    border-radius: 12px !important;
+    padding: 22px 25px !important;
+    margin: 20px 0 !important;
+    font-size: 17px !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08) !important;
+}
+
+.story-moral strong,
+.story-moral span {
+    color: #78350f !important;
+}

@@ -197,6 +197,7 @@ function vani_handle_pdf_download() {
                 header('Content-Type: application/pdf');
                 header('Content-Disposition: attachment; filename="10_Free_Bedtime_Stories.pdf"');
                 header('Content-Length: ' . filesize($pdf_path));
+                header('X-LiteSpeed-Cache-Control: no-cache');
                 header('Pragma: no-cache');
                 header('Expires: 0');
                 readfile($pdf_path);
