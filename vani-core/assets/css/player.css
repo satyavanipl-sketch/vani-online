@@ -203,126 +203,57 @@
 .consent-group input {
     margin-top: 3px;
 }
-
 /* ==========================================================================
-   GLOBAL SITE-WIDE FIXES: HEADER NAVIGATION & HIGH-CONTRAST TEXT STYLING
+   VaniOnline Single Story Template Improvements (Scoped strictly to body.single-post)
    ========================================================================== */
-
-/* Header & Navigation Z-index / Dropdown Overlap Fix */
-header.site-header,
-#masthead {
-    z-index: 99999 !important;
-    position: relative !important;
-    background-color: #ffffff !important;
-    border-bottom: 1px solid #e2e8f0 !important;
+body.single-post #secondary {
+    display: none !important;
 }
 
-/* Ensure Submenus and Dropdowns don't overlap awkwardly with body/clouds */
-.main-navigation ul ul,
-.nav-menu ul,
-.sub-menu,
-.children {
-    background-color: #ffffff !important;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15) !important;
-    border-radius: 12px !important;
-    padding: 10px 14px !important;
-    z-index: 999999 !important;
-    border: 1px solid #e2e8f0 !important;
+body.single-post #primary {
+    width: 100% !important;
+    max-width: 820px !important;
+    float: none !important;
+    margin: 0 auto !important;
 }
 
-.main-navigation ul ul a,
-.nav-menu ul a,
-.sub-menu a,
-.children a {
+body.single-post .entry-content {
+    max-width: 720px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    font-size: 19px !important;
+    line-height: 1.75 !important;
     color: #1e293b !important;
-    font-size: 15px !important;
-    font-weight: 600 !important;
-    padding: 8px 12px !important;
-    display: block !important;
-    white-space: nowrap !important;
-    background: transparent !important;
-    border-radius: 6px !important;
 }
 
-.main-navigation ul ul a:hover,
-.nav-menu ul a:hover,
-.sub-menu a:hover,
-.children a:hover {
-    color: #0284c7 !important;
-    background-color: #f1f5f9 !important;
+body.single-post .entry-content p {
+    margin-bottom: 24px !important;
 }
 
-.main-navigation a,
-.nav-menu > li > a {
-    color: #0f172a !important;
-    font-weight: 700 !important;
-}
-
-/* Site-wide Post & Content High Contrast Text Visibility */
-.entry-content,
-.blog-post-wrap,
-article {
+body.single-post .entry-content h2 {
+    margin-top: 36px !important;
+    margin-bottom: 16px !important;
     color: #0f172a !important;
 }
 
-.entry-content p {
-    color: #0f172a !important;
-    font-size: 17px !important;
-    line-height: 1.8 !important;
-}
-
-.entry-content h1,
-.entry-content h2,
-.entry-content h3,
-.entry-content h4 {
-    color: #0f172a !important;
-    font-weight: 700 !important;
-}
-
-.entry-content ul li,
-.entry-content ol li,
-.entry-content li {
-    color: #1e293b !important;
-    font-size: 16px !important;
-    line-height: 1.8 !important;
-}
-
-.story-intro-box {
-    background-color: #ffffff !important;
-    color: #1e293b !important;
-    border-left: 6px solid #10b981 !important;
-    border-radius: 12px !important;
-    padding: 22px 25px !important;
-    margin: 25px 0 !important;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1) !important;
-}
-
-.story-intro-box h3 {
-    color: #047857 !important;
-    margin-top: 0 !important;
-}
-
-.story-intro-box ul,
-.story-intro-box li {
-    color: #334155 !important;
-}
-
-.story-intro-box li strong {
+body.single-post .entry-content h3 {
+    margin-top: 28px !important;
+    margin-bottom: 14px !important;
     color: #0f172a !important;
 }
 
-.story-moral {
-    background-color: #fffbeb !important;
-    color: #78350f !important;
-    border-left: 6px solid #f59e0b !important;
-    border-radius: 12px !important;
-    padding: 22px 25px !important;
-    margin: 20px 0 !important;
-    font-size: 17px !important;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08) !important;
+body.single-post .entry-content img {
+    max-width: 100% !important;
+    height: auto !important;
 }
 
-.story-moral strong,
-.story-moral span {
-    color: #78350f !important;
+@media (max-width: 768px) {
+    body.single-post #primary {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+    body.single-post .entry-content {
+        font-size: 18px !important;
+        line-height: 1.7 !important;
+    }
 }
