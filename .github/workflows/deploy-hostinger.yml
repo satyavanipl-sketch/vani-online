@@ -1,0 +1,53 @@
+name: Deploy Vani Core to Hostinger
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'vani-core/**'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Perform dry run (preview changes without uploading to server)'
+        required: true
+        default: false
+        type: boolean
+
+concurrency:
+  group: deploy-hostinger-vani-core
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: SFTP Deploy to Hostinger
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            vani-core
+
+      - name: Validate local plugin structure
+        run: |
+          echo "=== Verifying plugin files to deploy ==="
+          test -f vani-core/vani-core.php || { echo "ERROR: vani-core/vani-core.php not found!"; exit 1; }
+          test -f vani-core/assets/css/player.css || { echo "ERROR: vani-core/assets/css/player.css not found!"; exit 1; }
+          ls -la vani-core
+          ls -la vani-core/assets/css
+          echo "Plugin validation successful."
+
+      - name: SFTP Sync to Hostinger WordPress Plugin Directory
+        uses: wangyucode/sftp-upload-action@v3
+        with:
+          host: ${{ secrets.HOSTINGER_SFTP_HOST }}
+          port: ${{ secrets.HOSTINGER_SFTP_PORT || '65002' }}
+          username: ${{ secrets.HOSTINGER_SFTP_USER }}
+          password: ${{ secrets.HOSTINGER_SFTP_PASSWORD }}
+          localDir: 'vani-core'
+          remoteDir: ${{ secrets.HOSTINGER_SFTP_REMOTE_PATH }}
+          dryRun: ${{ inputs.dry_run == true }}
+          removeExtraFilesOnServer: false
+          forceUpload: true
+          exclude: '.git/**, *.md, *.log, tests/**'
